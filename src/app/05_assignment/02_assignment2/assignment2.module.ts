@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   declarations: [
     Assignment2Component
   ],
-  imports:[
+  imports: [
     CommonModule
   ],
   exports: [
@@ -14,5 +14,4 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class Assignment2Module {
-
 }

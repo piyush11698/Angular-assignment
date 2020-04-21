@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core'; 
 import { Todo } from 'src/app/03_pipes/models/todo.interface';
 
 @Component({
@@ -8,6 +8,18 @@ import { Todo } from 'src/app/03_pipes/models/todo.interface';
 })
 export class Assignment2Component {
   @Input()
-  todoItem:Todo
+  todoItem: Todo
 
-}
+  @Input()
+  SelectedTodo:Todo
+
+  @Output()
+  todoSelected = new EventEmitter<Todo>();
+
+  onSelectTodo(todo: Todo) {
+    this.todoSelected.emit(todo);
+  }
+
+};
+
+
